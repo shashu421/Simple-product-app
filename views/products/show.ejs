@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui pink huge header"><%= product.Productname %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= product.Image %>">
+        </div>
+        <br><hr>
+        <div class="content">
+            <center>
+                <h2><span><%= product.Productdescription %> </span></h2>
+            </center>
+        </div>
+    </div>
+    <h4>Category - <%= product.Category %></h6>
+    <h4>Size - <%= product.Productattribute %></h6>
+    <form action="/products/<%= product._id %>?_method=DELETE"method="POST">
+        <button class="ui red basic button ">DELETE</button>
+    </form>
+</div>
+
+<%- include("partials/footer") %>
